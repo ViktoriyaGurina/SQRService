@@ -10,14 +10,14 @@ import static org.junit.jupiter.api.Assertions.*;
 class SQRServiceTest {
 
     @ParameterizedTest
-    @CsvSource(value = {"sumOfSquares,99,5"})
-    void shouldSumOfSquares(String testName, int number, int expected) {
+    @CsvSource(value = {"sumOfSquares,3"})
+    void shouldSumOfSquares(String testName, int expected) {
         SQRService service = new SQRService();
 
         //int number = 99;
         //int expected = 5;
 
-        int actual = service.sumOfSquares(number);
+        int actual = service.sumOfSquares(200, 300);
 
         assertEquals(expected, actual);
     }
